@@ -189,6 +189,7 @@
 .model-featured p, .model-featured ul, .model-featured .model-price { color: var(--primary-foreground); }
 .model-note { margin-top: 24px; color: var(--muted-foreground); }
 .model-payment { list-style: none; padding: 0; }
+.model-payment .step-number { position: static; }
 .model-payment h3 { font-size: 26px; margin-bottom: 14px; }
 .model-payment p { color: var(--muted-foreground); }
 .model-highlight { margin-top: 32px; font: 500 32px/1.2 var(--font-display); }
