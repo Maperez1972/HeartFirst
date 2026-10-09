@@ -179,7 +179,7 @@
 .thanks-page > p { color: var(--muted-foreground); font-size: 17px; }
 .thanks-page > a:not(.hero-cta) { color: var(--terracotta-text); }
 .later-link { display: block; margin-top: 24px; font-size: 14px; text-decoration: underline; }
-@media (min-width: 1600px) { .hero { min-height: 710px; } .hero-inner { padding-top: 125px; padding-bottom: 120px; } }
+@media (min-width: 1600px) { .hero { min-height: 710px; } .hero-inner { padding-top: 159px; padding-bottom: 120px; } }
 @media (max-width: 1050px) {
   .container { width: calc(100% - 64px); }
   .header-inner nav { gap: 20px; }
