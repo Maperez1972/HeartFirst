@@ -25,7 +25,7 @@ const commitments = [
   { icon: LockKeyhole, title: 'Cero perfiles falsos', text: 'Nunca crearemos perfiles de relleno.' },
   { icon: EyeOff, title: 'Tus datos no se venden', text: 'Ni se ceden, ni hay publicidad de terceros.' },
   { icon: Heart, title: 'Siempre la verdad', text: 'Si no encontramos a alguien compatible, te lo decimos.' },
-  { icon: Handshake, title: 'Sin juicios por la cara', text: 'Tu foto solo se ve al final, y a la vez que la de la otra persona.' },
+  { icon: Handshake, title: 'Sin juicios "por la cara"', text: 'Tu foto solo se ve al final, y a la vez que la de la otra persona.' },
   { icon: Compass, title: 'Nadie desaparece sin más', text: 'Cada cierre se hace con un mensaje respetuoso.' },
   { icon: UserCheck, title: 'El mismo precio para todas las personas', text: 'Sin diferencias por género ni por edad.' },
   { icon: Clock3, title: 'Libertad para irte', text: 'Te das de baja en un paso y borramos tus datos.' },
