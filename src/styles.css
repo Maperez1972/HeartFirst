@@ -244,7 +244,7 @@
   .program-layout { gap: 40px; }
   .program-mark { padding-block: 25px; }
   .faq-layout h2 { max-width: none; }
-  .form-grid { gap: 20px 13px; }
+  .form-grid { grid-template-columns: 1fr; gap: 20px 13px; }
   .field { font-size: 12px; }
   .field input,.field select { font-size: 12px; padding-inline: 9px; }
   .consent-label { font-size: 12px; }
