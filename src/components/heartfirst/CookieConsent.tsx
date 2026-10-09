@@ -33,6 +33,6 @@ export default function CookieConsent() {
     if (measurementEnabled) updateConsent(consent);
     try { sessionStorage.setItem('heartfirst-consent', consent); } catch { /* no storage */ } setVisible(false);
   }
-  if (!visible) return null;
+  if (!visible || pathname === '/modelo') return null;
   return <aside className="cookie-banner" aria-label="Preferencias de cookies"><div><strong>Tu privacidad, primero.</strong><p>Solo usamos cookies de medición si tú lo aceptas. <Link to="/cookies">Política de cookies</Link></p></div><div className="cookie-actions"><Button variant="outline" onClick={() => choose('denied')}>Rechazar</Button><Button variant="outline" onClick={() => choose('granted')}>Aceptar</Button></div></aside>;
 }
