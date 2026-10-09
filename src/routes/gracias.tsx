@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { pageHead } from '@/lib/metadata';
 export const Route = createFileRoute('/gracias')({
   validateSearch: (search) => { const parsed = z.object({ intencion: z.enum(['ver_que_surge']).optional().catch(undefined) }).parse(search); return parsed; },
-  head: () => pageHead('Gracias. Ya has dado el primer paso', 'Tu primer paso con Heartfirst: una conversación para empezar a conocerte.'),
+  head: () => pageHead('Gracias. Ya has dado el primer paso'),
   component: ThanksPage,
 });
 function ThanksPage() {

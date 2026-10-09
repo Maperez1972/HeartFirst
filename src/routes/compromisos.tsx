@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router';
 import ContentPage from '@/components/heartfirst/ContentPage';
 import { pageHead } from '@/lib/metadata';
-export const Route = createFileRoute('/compromisos')({ head: () => pageHead('Nuestros compromisos', 'Ocho promesas públicas, cada una con una forma de comprobarla, y la carta de Miguel Ángel Pérez, fundador de Heartfirst.'), component: CommitmentsPage });
+export const Route = createFileRoute('/compromisos')({ head: () => pageHead('Nuestros compromisos'), component: CommitmentsPage });
 const promises = [
   ['Todas las personas son reales y están verificadas', 'Verificación de identidad antes de la primera presentación; publicaremos el porcentaje de cuentas verificadas en nuestro informe de transparencia.'],
   ['Nunca crearemos perfiles falsos ni de relleno', 'Cero perfiles creados por Heartfirst, auditable por un tercero.'],
