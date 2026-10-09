@@ -25,7 +25,7 @@ describe('Heartfirst registration', () => {
       const fetchMock = conRespuesta(201);
       const data = registrationSchema.parse({ ...valid, email: ' Persona@Example.com ', utm_source: 'x'.repeat(150) });
       await expect(guardarRegistro(data)).resolves.toEqual({ ok: true });
-      const [url, init] = fetchMock.mock.calls[0];
+      const [url, init] = fetchMock.mock.calls[0]!;
       expect(url).toMatch(/\/rest\/v1\/registros$/);
       expect(init.method).toBe('POST');
       expect(init.headers.Prefer).toBe('return=minimal');

@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router';
 import ContentPage from '@/components/heartfirst/ContentPage';
 import { pageHead } from '@/lib/metadata';
-export const Route = createFileRoute('/privacidad')({ head: () => pageHead("Política de privacidad", "Cómo Heartfirst usa y protege tus datos, sus plazos de conservación y tus derechos."), component: Content });
+export const Route = createFileRoute('/privacidad')({ head: () => pageHead("Política de privacidad"), component: Content });
 function Content() { return <ContentPage title="Política de privacidad">
 <section><h2>Quién es el responsable</h2><p>{"Miguel Ángel Pérez, [NIF], [dirección], miguelangel@heartfirst.es. Este proyecto está en fase de estudio: todavía no es un servicio comercial."}</p></section>
 <section><h2>Para qué usamos tus datos</h2><p>{"(1) Gestionar tu inscripción en la lista de espera y avisarte de novedades. (2) Hacerte una entrevista por voz y unos cuestionarios breves, y preparar con ellos un retrato de tu personalidad y tus valores. (3) Analizar, de forma agregada, si este enfoque resulta útil y qué interés despierta. (4) Medir qué anuncios funcionan, solo si aceptas las cookies."}</p></section>

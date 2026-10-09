@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router';
 import ContentPage from '@/components/heartfirst/ContentPage';
 import { pageHead } from '@/lib/metadata';
-export const Route = createFileRoute('/metodo')({ head: () => pageHead("Nuestro método", "Heartfirst se basa en décadas de investigación sobre parejas que duran. No prometemos amor científicamente probado; usamos lo que se sabe para que conozcas mejor a quien tienes delante."), component: Content });
+export const Route = createFileRoute('/metodo')({ head: () => pageHead("Nuestro método"), component: Content });
 function Content() { return <ContentPage title="Nuestro método" intro="Heartfirst se basa en décadas de investigación sobre parejas que duran. No prometemos amor científicamente probado; usamos lo que se sabe para que conozcas mejor a quien tienes delante.">
 <section><h2>Conocer antes de elegir</h2><p>{"Lo que decimos buscar en un perfil apenas predice quién nos atrae cuando le conocemos (Eastwick y Finkel, 2008). Por eso la foto llega al final y empezamos por la conversación."}</p></section>
 <section><h2>La cercanía se construye</h2><p>{"Abrirse poco a poco y por turnos acerca a dos personas (Aron y colaboradores, 1997). Nuestras conversaciones guiadas siguen ese principio."}</p></section>

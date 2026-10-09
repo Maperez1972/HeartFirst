@@ -4,7 +4,7 @@ import { pageHead } from '@/lib/metadata';
 export const Route = createFileRoute('/modelo')({
   staticData: { sitemap: false },
   head: () => {
-    const head = pageHead('Cómo funciona Heartfirst por dentro', 'Modelo de acompañamiento de Heartfirst para socios y colaboradores: precios, pagos y garantías en validación.');
+    const head = pageHead('Cómo funciona Heartfirst por dentro');
     return { ...head, meta: [...head.meta, { name: 'robots', content: 'noindex, nofollow' }] };
   },
   component: ModelPage,
