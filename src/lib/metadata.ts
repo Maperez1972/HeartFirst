@@ -1,4 +1,4 @@
-export const SITE_TITLE = 'Pareja estable a partir de los 40 en Madrid · Heartfirst';
+export const SITE_URL = 'https://heartfirst.lovable.app';
 export const SITE_DESCRIPTION = 'Conoce a alguien por sus valores, su voz y su forma de ser antes de ver su foto. Identidad verificada y acompañamiento personal. Apúntate a la lista.';
 
 const BRAND_SUFFIX = ' · Heartfirst';
