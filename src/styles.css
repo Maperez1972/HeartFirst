@@ -204,7 +204,7 @@
   .header-inner nav { margin-left: 0; }
   .header-inner nav a { font-size: 11px; }
   .header-inner nav a:last-child { display: none; }
-  .hero { min-height: 710px; background: var(--secondary); }
+  .hero { min-height: 780px; background: var(--secondary); }
   .hero-image { height: 330px; top: auto; bottom: 87px; object-position: right 64%; }
   .hero-inner { padding-top: 58px; padding-bottom: 345px; }
   .hero-copy { width: 100%; max-width: 470px; }
