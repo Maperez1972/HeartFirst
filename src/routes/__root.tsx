@@ -13,6 +13,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import SiteHeader from "@/components/heartfirst/SiteHeader";
 import SiteFooter from "@/components/heartfirst/SiteFooter";
+import CookieConsent from "@/components/heartfirst/CookieConsent";
 import { Button } from "@/components/ui/button";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
@@ -124,6 +125,7 @@ function RootComponent() {
       <SiteHeader />
       <Outlet />
       <SiteFooter />
+      <CookieConsent />
     </QueryClientProvider>
   );
 }
