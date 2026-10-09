@@ -14,3 +14,5 @@
 - Store only arrival campaign parameters and cookie consent in sessionStorage; pass the non-sensitive thanks-page intent via route search to avoid persisting form data.
 - Define all Heartfirst visual tokens in src/styles.css and use existing shadcn controls, so the brand remains consistent across every page.
 - Keep Google measurement inactive while its ID is a placeholder, with denied Consent Mode defaults and measurement components only on landing and thanks routes, to avoid invalid tracking requests.
+- Mount cookie preferences once in the shared shell, with measurement gated to landing and thanks paths, so footer preferences reopen on every page without enabling tracking elsewhere.
+- Use ContentPage for informational leaf-page typography and spacing, so supplied long-form copy preserves the existing brand styles.
