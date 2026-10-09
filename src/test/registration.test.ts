@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import { registrationSchema } from '@/types/registration';
 import { guardarRegistro } from '@/lib/registro';
 
@@ -13,8 +13,36 @@ describe('Heartfirst registration', () => {
     expect(registrationSchema.safeParse({ ...valid, ciudad: 'otra' }).success).toBe(false);
     expect(registrationSchema.safeParse({ ...valid, ciudad: 'otra', ciudad_otra: 'x'.repeat(81) }).success).toBe(false);
   });
-  it('simulates registration without sending data', async () => {
-    const data = registrationSchema.parse(valid);
-    await expect(guardarRegistro(data)).resolves.toEqual({ ok: true });
+  describe('guardarRegistro', () => {
+    afterEach(() => vi.unstubAllGlobals());
+    const conRespuesta = (status: number) => {
+      const fetchMock = vi.fn().mockResolvedValue(new Response(null, { status }));
+      vi.stubGlobal('fetch', fetchMock);
+      return fetchMock;
+    };
+
+    it('envía solo inserción, normaliza el email y recorta UTM', async () => {
+      const fetchMock = conRespuesta(201);
+      const data = registrationSchema.parse({ ...valid, email: ' Persona@Example.com ', utm_source: 'x'.repeat(150) });
+      await expect(guardarRegistro(data)).resolves.toEqual({ ok: true });
+      const [url, init] = fetchMock.mock.calls[0];
+      expect(url).toMatch(/\/rest\/v1\/registros$/);
+      expect(init.method).toBe('POST');
+      expect(init.headers.Prefer).toBe('return=minimal');
+      const cuerpo = JSON.parse(init.body);
+      expect(cuerpo.email).toBe('persona@example.com');
+      expect(cuerpo.utm_source).toHaveLength(100);
+      expect(cuerpo.ciudad_otra).toBeNull();
+    });
+    it('trata un email repetido como éxito sin revelarlo', async () => {
+      conRespuesta(409);
+      await expect(guardarRegistro(registrationSchema.parse(valid))).resolves.toEqual({ ok: true, duplicado: true });
+    });
+    it('devuelve error ante fallo del servidor o de red', async () => {
+      conRespuesta(500);
+      await expect(guardarRegistro(registrationSchema.parse(valid))).resolves.toEqual({ ok: false });
+      vi.stubGlobal('fetch', vi.fn().mockRejectedValue(new TypeError('offline')));
+      await expect(guardarRegistro(registrationSchema.parse(valid))).resolves.toEqual({ ok: false });
+    });
   });
 });
