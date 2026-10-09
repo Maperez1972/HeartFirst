@@ -17,6 +17,7 @@ import { Route as ConstruirRouteImport } from './routes/construir'
 import { Route as CookiesRouteImport } from './routes/cookies'
 import { Route as GraciasRouteImport } from './routes/gracias'
 import { Route as MetodoRouteImport } from './routes/metodo'
+import { Route as ModeloRouteImport } from './routes/modelo'
 import { Route as PrivacidadRouteImport } from './routes/privacidad'
 
 const IndexRoute = IndexRouteImport.update({
@@ -59,6 +60,11 @@ const MetodoRoute = MetodoRouteImport.update({
   path: '/metodo',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ModeloRoute = ModeloRouteImport.update({
+  id: '/modelo',
+  path: '/modelo',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PrivacidadRoute = PrivacidadRouteImport.update({
   id: '/privacidad',
   path: '/privacidad',
@@ -74,6 +80,7 @@ export interface FileRoutesByFullPath {
   '/cookies': typeof CookiesRoute
   '/gracias': typeof GraciasRoute
   '/metodo': typeof MetodoRoute
+  '/modelo': typeof ModeloRoute
   '/privacidad': typeof PrivacidadRoute
 }
 export interface FileRoutesByTo {
@@ -85,6 +92,7 @@ export interface FileRoutesByTo {
   '/cookies': typeof CookiesRoute
   '/gracias': typeof GraciasRoute
   '/metodo': typeof MetodoRoute
+  '/modelo': typeof ModeloRoute
   '/privacidad': typeof PrivacidadRoute
 }
 export interface FileRoutesById {
@@ -97,6 +105,7 @@ export interface FileRoutesById {
   '/cookies': typeof CookiesRoute
   '/gracias': typeof GraciasRoute
   '/metodo': typeof MetodoRoute
+  '/modelo': typeof ModeloRoute
   '/privacidad': typeof PrivacidadRoute
 }
 export interface FileRouteTypes {
@@ -110,6 +119,7 @@ export interface FileRouteTypes {
     | '/cookies'
     | '/gracias'
     | '/metodo'
+    | '/modelo'
     | '/privacidad'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -121,6 +131,7 @@ export interface FileRouteTypes {
     | '/cookies'
     | '/gracias'
     | '/metodo'
+    | '/modelo'
     | '/privacidad'
   id:
     | '__root__'
@@ -132,6 +143,7 @@ export interface FileRouteTypes {
     | '/cookies'
     | '/gracias'
     | '/metodo'
+    | '/modelo'
     | '/privacidad'
   fileRoutesById: FileRoutesById
 }
@@ -144,6 +156,7 @@ export interface RootRouteChildren {
   CookiesRoute: typeof CookiesRoute
   GraciasRoute: typeof GraciasRoute
   MetodoRoute: typeof MetodoRoute
+  ModeloRoute: typeof ModeloRoute
   PrivacidadRoute: typeof PrivacidadRoute
 }
 
@@ -205,6 +218,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MetodoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/modelo': {
+      id: '/modelo'
+      path: '/modelo'
+      fullPath: '/modelo'
+      preLoaderRoute: typeof ModeloRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/privacidad': {
       id: '/privacidad'
       path: '/privacidad'
@@ -224,6 +244,7 @@ const rootRouteChildren: RootRouteChildren = {
   CookiesRoute: CookiesRoute,
   GraciasRoute: GraciasRoute,
   MetodoRoute: MetodoRoute,
+  ModeloRoute: ModeloRoute,
   PrivacidadRoute: PrivacidadRoute,
 }
 export const routeTree = rootRouteImport

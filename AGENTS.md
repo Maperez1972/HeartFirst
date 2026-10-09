@@ -16,3 +16,4 @@
 - Keep Google measurement inactive while its ID is a placeholder, with denied Consent Mode defaults and measurement calls only on landing and thanks routes, to avoid invalid tracking requests.
 - Mount cookie preferences once in the shared shell, with measurement gated to landing and thanks paths, so footer preferences reopen on every page without enabling tracking elsewhere.
 - Use ContentPage for informational leaf-page typography and spacing, so supplied long-form copy preserves the existing brand styles.
+- Keep the partner model in an unlinked file route with explicit indexing/sitemap exclusions and suppress cookie preferences there, so provisional commercial content stays outside public discovery and measurement.
