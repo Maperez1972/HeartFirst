@@ -10,33 +10,141 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AvisoLegalRouteImport } from './routes/aviso-legal'
+import { Route as CompromisosRouteImport } from './routes/compromisos'
+import { Route as ConocerRouteImport } from './routes/conocer'
+import { Route as ConstruirRouteImport } from './routes/construir'
+import { Route as CookiesRouteImport } from './routes/cookies'
+import { Route as GraciasRouteImport } from './routes/gracias'
+import { Route as MetodoRouteImport } from './routes/metodo'
+import { Route as PrivacidadRouteImport } from './routes/privacidad'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AvisoLegalRoute = AvisoLegalRouteImport.update({
+  id: '/aviso-legal',
+  path: '/aviso-legal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompromisosRoute = CompromisosRouteImport.update({
+  id: '/compromisos',
+  path: '/compromisos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConocerRoute = ConocerRouteImport.update({
+  id: '/conocer',
+  path: '/conocer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConstruirRoute = ConstruirRouteImport.update({
+  id: '/construir',
+  path: '/construir',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CookiesRoute = CookiesRouteImport.update({
+  id: '/cookies',
+  path: '/cookies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GraciasRoute = GraciasRouteImport.update({
+  id: '/gracias',
+  path: '/gracias',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MetodoRoute = MetodoRouteImport.update({
+  id: '/metodo',
+  path: '/metodo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacidadRoute = PrivacidadRouteImport.update({
+  id: '/privacidad',
+  path: '/privacidad',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/aviso-legal': typeof AvisoLegalRoute
+  '/compromisos': typeof CompromisosRoute
+  '/conocer': typeof ConocerRoute
+  '/construir': typeof ConstruirRoute
+  '/cookies': typeof CookiesRoute
+  '/gracias': typeof GraciasRoute
+  '/metodo': typeof MetodoRoute
+  '/privacidad': typeof PrivacidadRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/aviso-legal': typeof AvisoLegalRoute
+  '/compromisos': typeof CompromisosRoute
+  '/conocer': typeof ConocerRoute
+  '/construir': typeof ConstruirRoute
+  '/cookies': typeof CookiesRoute
+  '/gracias': typeof GraciasRoute
+  '/metodo': typeof MetodoRoute
+  '/privacidad': typeof PrivacidadRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/aviso-legal': typeof AvisoLegalRoute
+  '/compromisos': typeof CompromisosRoute
+  '/conocer': typeof ConocerRoute
+  '/construir': typeof ConstruirRoute
+  '/cookies': typeof CookiesRoute
+  '/gracias': typeof GraciasRoute
+  '/metodo': typeof MetodoRoute
+  '/privacidad': typeof PrivacidadRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/aviso-legal'
+    | '/compromisos'
+    | '/conocer'
+    | '/construir'
+    | '/cookies'
+    | '/gracias'
+    | '/metodo'
+    | '/privacidad'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/aviso-legal'
+    | '/compromisos'
+    | '/conocer'
+    | '/construir'
+    | '/cookies'
+    | '/gracias'
+    | '/metodo'
+    | '/privacidad'
+  id:
+    | '__root__'
+    | '/'
+    | '/aviso-legal'
+    | '/compromisos'
+    | '/conocer'
+    | '/construir'
+    | '/cookies'
+    | '/gracias'
+    | '/metodo'
+    | '/privacidad'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AvisoLegalRoute: typeof AvisoLegalRoute
+  CompromisosRoute: typeof CompromisosRoute
+  ConocerRoute: typeof ConocerRoute
+  ConstruirRoute: typeof ConstruirRoute
+  CookiesRoute: typeof CookiesRoute
+  GraciasRoute: typeof GraciasRoute
+  MetodoRoute: typeof MetodoRoute
+  PrivacidadRoute: typeof PrivacidadRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +156,75 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/aviso-legal': {
+      id: '/aviso-legal'
+      path: '/aviso-legal'
+      fullPath: '/aviso-legal'
+      preLoaderRoute: typeof AvisoLegalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/compromisos': {
+      id: '/compromisos'
+      path: '/compromisos'
+      fullPath: '/compromisos'
+      preLoaderRoute: typeof CompromisosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/conocer': {
+      id: '/conocer'
+      path: '/conocer'
+      fullPath: '/conocer'
+      preLoaderRoute: typeof ConocerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/construir': {
+      id: '/construir'
+      path: '/construir'
+      fullPath: '/construir'
+      preLoaderRoute: typeof ConstruirRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookies': {
+      id: '/cookies'
+      path: '/cookies'
+      fullPath: '/cookies'
+      preLoaderRoute: typeof CookiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gracias': {
+      id: '/gracias'
+      path: '/gracias'
+      fullPath: '/gracias'
+      preLoaderRoute: typeof GraciasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/metodo': {
+      id: '/metodo'
+      path: '/metodo'
+      fullPath: '/metodo'
+      preLoaderRoute: typeof MetodoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacidad': {
+      id: '/privacidad'
+      path: '/privacidad'
+      fullPath: '/privacidad'
+      preLoaderRoute: typeof PrivacidadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AvisoLegalRoute: AvisoLegalRoute,
+  CompromisosRoute: CompromisosRoute,
+  ConocerRoute: ConocerRoute,
+  ConstruirRoute: ConstruirRoute,
+  CookiesRoute: CookiesRoute,
+  GraciasRoute: GraciasRoute,
+  MetodoRoute: MetodoRoute,
+  PrivacidadRoute: PrivacidadRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
