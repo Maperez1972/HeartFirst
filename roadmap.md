@@ -7,5 +7,5 @@
 - [x] Add footer cookie preferences reopening and verify content, navigation and layouts.
 - [x] Add audience line to all landing heroes and verify mobile spacing.
 - [x] Add hidden /modelo with supplied content, indexing exclusion and no measurement banner; verify.
-- [ ] Apply supplied automated-accompaniment copy to landing, method, metadata and private model, preserving protected files.
-- [ ] Audit remaining human-attention promises without changing them and verify updated pages.
+- [x] Apply supplied automated-accompaniment copy to landing, method, metadata and private model, preserving protected files.
+- [x] Audit remaining human-attention promises without changing them and verify updated pages.
