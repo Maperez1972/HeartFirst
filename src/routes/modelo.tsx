@@ -11,12 +11,12 @@ export const Route = createFileRoute('/modelo')({
 });
 
 const included = [
-  'Tu entrevista y tu espejo, revisado contigo',
+  'Tu entrevista y tu espejo, que puedes revisar y corregir',
   'Verificación de identidad',
-  'Presentaciones elegidas una a una por compatibilidad',
+  'Presentaciones de una en una, con el porqué del encaje',
   'Conversaciones guiadas, por escrito y por voz',
-  'Una persona del equipo que te acompaña todo el tiempo',
-  'Seguimiento después de cada primera cita',
+  'Una búsqueda que aprende de cada presentación',
+  'Consejos y un canal de aviso para que todo sea seguro',
 ];
 const entry = {
   title: 'Primera presentación',
@@ -26,7 +26,7 @@ const entry = {
     'Una presentación elegida por compatibilidad',
     'Conversaciones guiadas, por escrito y por voz',
     'La revelación, mutua y a la vez',
-    'Seguimiento después de la primera cita',
+    'Una valoración breve al final que mejora tu siguiente presentación',
   ],
   note: 'Si sigues, los 49 € se descuentan de tu acompañamiento.',
 };
