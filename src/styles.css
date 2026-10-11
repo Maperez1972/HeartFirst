@@ -185,6 +185,7 @@
 .model-card .model-price { font: 500 64px/1 var(--font-display); margin-bottom: 20px; color: var(--foreground); }
 .model-card ul { padding-left: 20px; margin-block: 24px; list-style: disc; }
 .model-card li + li { margin-top: 10px; }
+.model-entry { max-width: 860px; }
 .model-featured { background: var(--primary); color: var(--primary-foreground); border-color: var(--primary); }
 .model-featured p, .model-featured ul, .model-featured .model-price { color: var(--primary-foreground); }
 .model-note { margin-top: 24px; color: var(--muted-foreground); }
