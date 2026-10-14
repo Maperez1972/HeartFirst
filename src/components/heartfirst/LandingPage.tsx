@@ -28,7 +28,7 @@ const commitments = [
   { icon: Compass, title: 'Nadie desaparece sin más', text: 'Cada cierre se hace con un mensaje respetuoso.' },
   { icon: UserCheck, title: 'Un precio claro, el mismo para todos', text: 'Sin renovaciones automáticas ni pagos sorpresa. Sin diferencias por género ni por edad.' },
   { icon: Clock3, title: 'Libertad para irte', text: 'Desistes o te das de baja en un paso, sin preguntas, y borramos tus datos.' },
-  { icon: LockKeyhole, title: 'Una persona te responde', text: 'Cualquier duda sobre un cobro o una reclamación tiene respuesta de una persona en 48 horas.' },
+  { icon: LockKeyhole, title: 'Soporte y privacidad: responde una persona', text: 'Las dudas sobre cobros, las reclamaciones y las consultas sobre tus datos las atiende una persona del equipo en un máximo de 48 horas.' },
 ];
 const faqs = [
   ['¿De verdad no voy a ver fotos?', 'No hasta el final. Primero os conocéis por lo que pensáis, lo que os importa y vuestra voz. Cuando los dos queréis, veis vuestras fotos a la vez. Lo físico importa, y por eso llega; pero llega cuando ya sabes a quién estás mirando.'],
@@ -39,7 +39,7 @@ const faqs = [
   ['¿Es para cualquier orientación?', 'Sí. Heartfirst es para cualquier persona que busque una relación estable, sea quien sea la persona que busca.'],
   ['¿Dónde funciona?', 'Empezamos en Madrid. Si vives en otra ciudad, apúntate igualmente: la lista de espera nos dice dónde abrir después.'],
   ['¿Cuánto cuesta?', 'Entrar en la lista y hacer tu entrevista es gratis. El acompañamiento tendrá un precio cerrado, igual para todas las personas, que anunciaremos al abrir el piloto; quienes estén en la lista tendrán condiciones de fundación. Sin renovaciones automáticas: cuando termina tu acompañamiento, solo continúas si tú lo pides.'],
-  ['¿Cómo sé que las personas son reales?', 'Antes de conocer a nadie, cada persona verifica su identidad con su documento y un selfie. Nunca creamos perfiles de relleno. La verificación confirma quién es cada persona, no todo lo que cuenta de sí misma: si algo no te cuadra, puedes avisarnos en un toque y lo revisa una persona del equipo.'],
+  ['¿Cómo sé que las personas son reales?', 'Antes de conocer a nadie, cada persona verifica su identidad con su documento y un selfie. Nunca creamos perfiles de relleno. La verificación confirma quién es cada persona, no todo lo que cuenta de sí misma: si algo no te cuadra, puedes avisarnos en un toque y lo revisamos enseguida.'],
   ['¿Quién está detrás?', 'Miguel Ángel Pérez, fundador de varias empresas de tecnología de confianza, que conoce el problema desde dentro. Puedes leer su carta y escribirle directamente.'],
 ];
 export default function LandingPage({ variant }: { variant: Variant }) {

@@ -47,7 +47,7 @@ const guarantees = [
   ['Un mínimo de presentaciones', 'Al menos 4 presentaciones en el acompañamiento de 6 meses y 8 en el de 12. Si no llegamos, lo alargamos sin coste hasta completarlas.'],
   ['Si no encontramos a nadie, te lo decimos', 'Si en 8 semanas no hay ninguna presentación compatible, te avisamos y eliges: pausar sin coste o recuperar tu dinero íntegro. También los 49 € de la primera presentación.'],
   ['Libertad para irte', 'Te das de baja en un paso y borramos tus datos.'],
-  ['Una persona te responde', 'Las dudas sobre cobros y las reclamaciones las atiende una persona del equipo en un máximo de 48 horas.'],
+  ['Soporte y privacidad: responde una persona', 'Las dudas sobre cobros, las reclamaciones y las consultas sobre tus datos las atiende una persona del equipo en un máximo de 48 horas.'],
 ];
 
 function ModelPage() {
