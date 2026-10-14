@@ -39,7 +39,7 @@ const faqs = [
   ['¿Es para cualquier orientación?', 'Sí. Heartfirst es para cualquier persona que busque una relación estable, sea quien sea la persona que busca.'],
   ['¿Dónde funciona?', 'Empezamos en Madrid. Si vives en otra ciudad, apúntate igualmente: la lista de espera nos dice dónde abrir después.'],
   ['¿Cuánto cuesta?', 'Entrar en la lista y hacer tu entrevista es gratis. El acompañamiento tendrá un precio cerrado, igual para todas las personas, que anunciaremos al abrir el piloto; quienes estén en la lista tendrán condiciones de fundación. Sin renovaciones automáticas: cuando termina tu acompañamiento, solo continúas si tú lo pides.'],
-  ['¿Cómo sé que las personas son reales?', 'Antes de conocer a nadie, cada persona verifica su identidad con su documento y un selfie. Nunca creamos perfiles de relleno. La verificación confirma quién es cada persona, no todo lo que cuenta de sí misma: si algo no te cuadra, puedes avisarnos en un toque y lo revisa una persona en menos de 24 horas.'],
+  ['¿Cómo sé que las personas son reales?', 'Antes de conocer a nadie, cada persona verifica su identidad con su documento y un selfie. Nunca creamos perfiles de relleno. La verificación confirma quién es cada persona, no todo lo que cuenta de sí misma: si algo no te cuadra, puedes avisarnos en un toque: una persona lo revisa y te responde en menos de 24 horas, también en fin de semana. Si resolverlo lleva más tiempo, te contamos los pasos. Si estás en peligro, llama al 112.'],
   ['¿Quién está detrás?', 'Miguel Ángel Pérez, fundador de varias empresas de tecnología de confianza, que conoce el problema desde dentro. Puedes leer su carta y escribirle directamente.'],
 ];
 export default function LandingPage({ variant }: { variant: Variant }) {
