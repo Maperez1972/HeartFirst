@@ -3,14 +3,14 @@ import ContentPage from '@/components/heartfirst/ContentPage';
 import { pageHead } from '@/lib/metadata';
 export const Route = createFileRoute('/compromisos')({ head: () => pageHead('Nuestros compromisos'), component: CommitmentsPage });
 const promises = [
-  ['Todas las personas son reales y están verificadas, y nunca crearemos perfiles de relleno', 'Verificación de identidad con documento y selfie antes de la primera presentación; publicaremos el porcentaje de cuentas verificadas en nuestro informe de transparencia. Cero perfiles creados por Heartfirst, auditable por un tercero. La verificación confirma la identidad, no todo lo que cada persona cuenta de sí misma: por eso cualquiera puede avisar o denunciar en un toque y lo revisa una persona del equipo.'],
+  ['Todas las personas son reales y están verificadas, y nunca crearemos perfiles de relleno', 'Verificación de identidad con documento y selfie antes de la primera presentación; publicaremos el porcentaje de cuentas verificadas en nuestro informe de transparencia. Cero perfiles creados por Heartfirst, auditable por un tercero. La verificación confirma la identidad, no todo lo que cada persona cuenta de sí misma: por eso cualquiera puede avisar o denunciar en un toque y lo revisamos enseguida.'],
   ['Tus datos no se venden ni se ceden. Sin publicidad de terceros', 'Política de privacidad y lista pública de proveedores que tratan datos.'],
   ['Te diremos la verdad: si no encontramos a alguien compatible, te lo decimos', 'Si en tu zona y tu tramo de edad aún no hay suficientes personas compatibles y activas, te lo decimos antes de cobrar y te reservamos un sitio prioritario sin coste. Durante el acompañamiento, al menos 4 presentaciones en 6 meses (8 en 12); si no llegamos, lo alargamos sin coste hasta completarlas. Aviso tras un plazo sin presentación compatible, con opción de pausar el acompañamiento sin coste. Solo te presentamos a personas activas y dentro de la distancia que eliges. Si limitamos o bloqueamos tu cuenta, te explicamos el motivo y puedes pedir que lo revisemos.'],
   ['Nadie es juzgado por su aspecto antes de conocerse', 'La foto permanece oculta hasta la revelación simultánea.'],
   ['Nadie desaparece sin más', 'Cada cierre de conversación va acompañado de un mensaje respetuoso guiado por la plataforma.'],
   ['Un precio claro, el mismo para todas las personas', 'Tarifa pública única, sin diferencias por género ni edad. Sin renovaciones automáticas ni pagos sorpresa: al terminar tu acompañamiento, solo continúas si tú lo pides.'],
   ['Puedes irte cuando quieras', 'Desistimiento en 14 días y baja en un paso, sin preguntas; borrado de datos en 30 días y política de devolución publicada.'],
-  ['Una persona te responde', 'Las dudas sobre cobros y las reclamaciones las atiende una persona del equipo, con respuesta en un máximo de 48 horas.'],
+  ['Soporte y privacidad: responde una persona', 'Las dudas sobre cobros, las reclamaciones y las consultas sobre tus datos las atiende una persona del equipo, con respuesta en un máximo de 48 horas.'],
 ];
 function CommitmentsPage() {
   return <ContentPage title="Nuestros compromisos" intro="Ocho promesas públicas, cada una con una forma de comprobarla.">
