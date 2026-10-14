@@ -41,9 +41,11 @@ const paymentSteps = [
   ['Si quieres seguir, eliges tu acompañamiento', 'Los 49 € se descuentan.'],
 ];
 const guarantees = [
-  ['14 días para pensártelo', 'Puedes desistir en los 14 días siguientes a la contratación, sin dar explicaciones.'],
+  ['14 días para pensártelo', 'Puedes desistir en los 14 días siguientes a la contratación, en un paso y sin dar explicaciones.'],
+  ['Sin renovaciones automáticas', 'El acompañamiento termina en su fecha. Solo continúas si tú lo pides: nada de cargos sorpresa.'],
   ['Si no encontramos a nadie, te lo decimos', 'Si en 8 semanas no hay ninguna presentación compatible, te avisamos y eliges: pausar sin coste o recuperar tu dinero íntegro. También los 49 € de la primera presentación.'],
   ['Libertad para irte', 'Te das de baja en un paso y borramos tus datos.'],
+  ['Una persona te responde', 'Las dudas sobre cobros y las reclamaciones las atiende una persona del equipo en un máximo de 48 horas.'],
 ];
 
 function ModelPage() {
