@@ -16,14 +16,14 @@ const reasons = [
 const steps = [
   ['Cuéntanos quién eres', 'Una entrevista por voz de unos 20 minutos, guiada por nuestro asistente digital, a tu ritmo y desde casa. Nada de rellenar casillas sobre ti: hablas, y nosotros aprendemos cómo eres.', 'Ya disponible'],
   ['Descúbrete en tu espejo', 'Te devolvemos un retrato de cómo eres y qué te importa, con el animal que mejor te representa. Lo revisas y lo corriges: nadie sabe más de ti que tú.', 'Ya disponible'],
-  ['Te presentamos a alguien', 'Una persona cada vez, activa y dentro de la distancia que tú eliges, elegida por valores compartidos, forma de ser y manera de vincularse. Sin fotos.', 'Próximamente en Madrid'],
+  ['Te presentamos a alguien', 'Una persona cada vez, activa y dentro de la distancia que tú eliges, elegida por valores compartidos, forma de ser y manera de vincularse. Sin fotos. Siempre sabrás en qué punto estás, y puedes pausar cuando quieras.', 'Próximamente en Madrid'],
   ['Conoceos sin prisa', 'Una conversación guiada, con preguntas que acercan y notas de voz. Al ritmo de los dos.', 'Próximamente en Madrid'],
   ['El momento de miraros', 'Cuando los dos queréis, veis vuestras fotos a la vez. Y si hay ganas, la primera cita.', 'Próximamente en Madrid'],
 ];
 const commitments = [
   { icon: Fingerprint, title: 'Personas reales', text: 'Cada persona verifica su identidad con su documento. Nunca crearemos perfiles de relleno.' },
   { icon: EyeOff, title: 'Tus datos no se venden', text: 'Ni se ceden, ni hay publicidad de terceros.' },
-  { icon: Heart, title: 'Siempre la verdad', text: 'Si no encontramos a alguien compatible, te lo decimos. Y si limitamos tu cuenta, te explicamos por qué.' },
+  { icon: Heart, title: 'Siempre la verdad', text: 'Si aún no hay suficientes personas compatibles cerca de ti, te lo decimos antes de cobrarte nada. Y si limitamos tu cuenta, te explicamos por qué.' },
   { icon: Handshake, title: 'Sin juicios "por la cara"', text: 'Tu foto solo se ve al final, y a la vez que la de la otra persona.' },
   { icon: Compass, title: 'Nadie desaparece sin más', text: 'Cada cierre se hace con un mensaje respetuoso.' },
   { icon: UserCheck, title: 'Un precio claro, el mismo para todos', text: 'Sin renovaciones automáticas ni pagos sorpresa. Sin diferencias por género ni por edad.' },
@@ -39,7 +39,7 @@ const faqs = [
   ['¿Es para cualquier orientación?', 'Sí. Heartfirst es para cualquier persona que busque una relación estable, sea quien sea la persona que busca.'],
   ['¿Dónde funciona?', 'Empezamos en Madrid. Si vives en otra ciudad, apúntate igualmente: la lista de espera nos dice dónde abrir después.'],
   ['¿Cuánto cuesta?', 'Entrar en la lista y hacer tu entrevista es gratis. El acompañamiento tendrá un precio cerrado, igual para todas las personas, que anunciaremos al abrir el piloto; quienes estén en la lista tendrán condiciones de fundación. Sin renovaciones automáticas: cuando termina tu acompañamiento, solo continúas si tú lo pides.'],
-  ['¿Cómo sé que las personas son reales?', 'Antes de conocer a nadie, cada persona verifica su identidad con su documento y un selfie. Nunca creamos perfiles de relleno.'],
+  ['¿Cómo sé que las personas son reales?', 'Antes de conocer a nadie, cada persona verifica su identidad con su documento y un selfie. Nunca creamos perfiles de relleno. La verificación confirma quién es cada persona, no todo lo que cuenta de sí misma: si algo no te cuadra, puedes avisarnos en un toque y lo revisa una persona del equipo.'],
   ['¿Quién está detrás?', 'Miguel Ángel Pérez, fundador de varias empresas de tecnología de confianza, que conoce el problema desde dentro. Puedes leer su carta y escribirle directamente.'],
 ];
 export default function LandingPage({ variant }: { variant: Variant }) {

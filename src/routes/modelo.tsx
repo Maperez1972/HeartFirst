@@ -43,6 +43,8 @@ const paymentSteps = [
 const guarantees = [
   ['14 días para pensártelo', 'Puedes desistir en los 14 días siguientes a la contratación, en un paso y sin dar explicaciones.'],
   ['Sin renovaciones automáticas', 'El acompañamiento termina en su fecha. Solo continúas si tú lo pides: nada de cargos sorpresa.'],
+  ['Antes de pagar, sabes si hay con quién', 'Solo vendemos la primera presentación si en tu zona y tu tramo de edad hay suficientes personas compatibles y activas. Si aún no, te lo decimos y te reservamos un sitio prioritario sin coste.'],
+  ['Un mínimo de presentaciones', 'Al menos 4 presentaciones en el acompañamiento de 6 meses y 8 en el de 12. Si no llegamos, lo alargamos sin coste hasta completarlas.'],
   ['Si no encontramos a nadie, te lo decimos', 'Si en 8 semanas no hay ninguna presentación compatible, te avisamos y eliges: pausar sin coste o recuperar tu dinero íntegro. También los 49 € de la primera presentación.'],
   ['Libertad para irte', 'Te das de baja en un paso y borramos tus datos.'],
   ['Una persona te responde', 'Las dudas sobre cobros y las reclamaciones las atiende una persona del equipo en un máximo de 48 horas.'],
