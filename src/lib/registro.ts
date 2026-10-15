@@ -21,7 +21,6 @@ export async function guardarRegistro(datos: RegistrationData): Promise<{ ok: bo
     intencion: datos.intencion,
     ciudad: datos.ciudad,
     ciudad_otra: datos.ciudad === 'otra' ? recortar(datos.ciudad_otra, 80) : null,
-    codigo_postal: datos.codigo_postal,
     variante: datos.variante,
     utm_source: recortar(datos.utm_source, 100),
     utm_medium: recortar(datos.utm_medium, 100),
@@ -32,16 +31,25 @@ export async function guardarRegistro(datos: RegistrationData): Promise<{ ok: bo
     acepta_genero_buscado: datos.acepta_genero_buscado,
   };
 
-  try {
-    const respuesta = await fetch(`${SUPABASE_URL}/rest/v1/registros`, {
+  const enviar = (datosCuerpo: Record<string, unknown>) =>
+    fetch(`${SUPABASE_URL}/rest/v1/registros`, {
       method: 'POST',
       headers: {
         apikey: SUPABASE_PUBLISHABLE_KEY,
         'Content-Type': 'application/json',
         Prefer: 'return=minimal',
       },
-      body: JSON.stringify(cuerpo),
+      body: JSON.stringify(datosCuerpo),
     });
+
+  try {
+    // El código postal es opcional: solo se envía si la persona lo ha escrito.
+    let respuesta = await enviar(datos.codigo_postal ? { ...cuerpo, codigo_postal: datos.codigo_postal } : cuerpo);
+    // Si la columna aún no existe en la base de datos (PGRST204), se guarda el registro sin el código postal.
+    if (respuesta.status === 400 && datos.codigo_postal) {
+      const error = await respuesta.json().catch(() => null);
+      if (error?.code === 'PGRST204') respuesta = await enviar(cuerpo);
+    }
 
     if (respuesta.status === 201 || respuesta.status === 204) return { ok: true };
     // 409: email ya registrado (índice único). Se trata como éxito para no revelar quién está en la lista.

@@ -38,6 +38,20 @@ describe('Heartfirst registration', () => {
       expect(cuerpo.utm_source).toHaveLength(100);
       expect(cuerpo.ciudad_otra).toBeNull();
     });
+    it('envía el código postal solo si existe y reintenta sin él si falta la columna', async () => {
+      const fetchMock = vi.fn()
+        .mockResolvedValueOnce(new Response(JSON.stringify({ code: 'PGRST204' }), { status: 400 }))
+        .mockResolvedValueOnce(new Response(null, { status: 201 }));
+      vi.stubGlobal('fetch', fetchMock);
+      await expect(guardarRegistro(registrationSchema.parse({ ...valid, codigo_postal: '28013' }))).resolves.toEqual({ ok: true });
+      expect(JSON.parse(fetchMock.mock.calls[0]![1].body).codigo_postal).toBe('28013');
+      expect(JSON.parse(fetchMock.mock.calls[1]![1].body)).not.toHaveProperty('codigo_postal');
+    });
+    it('no envía el campo si el código postal está vacío', async () => {
+      const fetchMock = conRespuesta(201);
+      await guardarRegistro(registrationSchema.parse(valid));
+      expect(JSON.parse(fetchMock.mock.calls[0]![1].body)).not.toHaveProperty('codigo_postal');
+    });
     it('trata un email repetido como éxito sin revelarlo', async () => {
       conRespuesta(409);
       await expect(guardarRegistro(registrationSchema.parse(valid))).resolves.toEqual({ ok: true, duplicado: true });
