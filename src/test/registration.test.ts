@@ -2,7 +2,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest';
 import { registrationSchema } from '@/types/registration';
 import { guardarRegistro } from '@/lib/registro';
 
-const valid = { email: 'persona@example.com', edad: '45-49', genero: 'mujer', busca: 'hombres', intencion: 'estable', ciudad: 'madrid', ciudad_otra: null, acepta_edad: true, acepta_lista: true, acepta_genero_buscado: true, variante: 'a', utm_source: null, utm_medium: null, utm_campaign: null, utm_content: null };
+const valid = { email: 'persona@example.com', edad: '45-49', genero: 'mujer', busca: 'hombres', intencion: 'estable', ciudad: 'madrid', ciudad_otra: null, codigo_postal: null, acepta_edad: true, acepta_lista: true, acepta_genero_buscado: true, variante: 'a', utm_source: null, utm_medium: null, utm_campaign: null, utm_content: null };
 describe('Heartfirst registration', () => {
   it('accepts the exact required payload', () => expect(registrationSchema.safeParse(valid).success).toBe(true));
   it('rejects invalid emails and missing consent', () => {
@@ -12,6 +12,10 @@ describe('Heartfirst registration', () => {
   it('requires a bounded city when another city is chosen', () => {
     expect(registrationSchema.safeParse({ ...valid, ciudad: 'otra' }).success).toBe(false);
     expect(registrationSchema.safeParse({ ...valid, ciudad: 'otra', ciudad_otra: 'x'.repeat(81) }).success).toBe(false);
+  });
+  it('accepts an optional Spanish postal code and rejects malformed ones', () => {
+    expect(registrationSchema.safeParse({ ...valid, codigo_postal: '28013' }).success).toBe(true);
+    for (const cp of ['2801', '280130', '99001', '00123', 'abcde']) expect(registrationSchema.safeParse({ ...valid, codigo_postal: cp }).success).toBe(false);
   });
   describe('guardarRegistro', () => {
     afterEach(() => vi.unstubAllGlobals());

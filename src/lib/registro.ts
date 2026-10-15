@@ -21,6 +21,7 @@ export async function guardarRegistro(datos: RegistrationData): Promise<{ ok: bo
     intencion: datos.intencion,
     ciudad: datos.ciudad,
     ciudad_otra: datos.ciudad === 'otra' ? recortar(datos.ciudad_otra, 80) : null,
+    codigo_postal: datos.codigo_postal,
     variante: datos.variante,
     utm_source: recortar(datos.utm_source, 100),
     utm_medium: recortar(datos.utm_medium, 100),

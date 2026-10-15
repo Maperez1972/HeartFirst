@@ -7,6 +7,7 @@ export const registrationSchema = z.object({
   intencion: z.enum(['estable', 'ver_que_surge', 'no_lo_se']),
   ciudad: z.enum(['madrid', 'comunidad_madrid', 'otra']),
   ciudad_otra: z.string().trim().max(80).nullable(),
+  codigo_postal: z.string().trim().regex(/^(0[1-9]|[1-4]\d|5[0-2])\d{3}$/, 'Escribe un código postal de 5 cifras o déjalo en blanco.').nullable(),
   acepta_edad: z.literal(true), acepta_lista: z.literal(true), acepta_genero_buscado: z.literal(true),
   variante: z.enum(['a', 'b']),
   utm_source: z.string().max(200).nullable(), utm_medium: z.string().max(200).nullable(),
