@@ -177,7 +177,7 @@
 .placeholder-page p { color: var(--muted-foreground); }
 .model-page { padding-block: 80px; }
 .model-page h1 { max-width: 850px; margin-bottom: 28px; }
-.model-intro { max-width: 780px; color: var(--muted-foreground); }
+.model-intro { color: var(--muted-foreground); }
 .model-section { margin-top: 64px; }
 .model-section h2 { margin-bottom: 28px; }
 .model-plans, .model-guarantees, .model-payment { display: grid; gap: 24px; grid-template-columns: 1fr; }
@@ -196,7 +196,7 @@
 .model-payment h3 { font-size: 26px; margin-bottom: 14px; }
 .model-payment p { color: var(--muted-foreground); }
 .model-highlight { margin-top: 32px; font: 500 32px/1.2 var(--font-display); }
-.model-prose { max-width: 820px; color: var(--muted-foreground); }
+.model-prose { color: var(--muted-foreground); }
 .model-final { margin-top: 56px; font-size: 14px; color: var(--muted-foreground); }
 @media (min-width: 701px) { .model-plans { grid-template-columns: repeat(2, 1fr); } .model-guarantees { grid-template-columns: repeat(3, 1fr); } .model-payment { grid-template-columns: repeat(4, 1fr); } }
 .thanks-page { min-height: calc(100vh - 230px); text-align: center; padding-block: 100px 140px; max-width: 750px; }
